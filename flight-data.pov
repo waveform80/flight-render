@@ -93,7 +93,8 @@ union {
 #end
 
 object {
-	axes rotate craft_orientation
+	axes
+	rotate craft_orientation
 }
 object {
 	thermometer(temp_h)

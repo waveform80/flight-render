@@ -18,7 +18,7 @@ clean:
 	@rm -f flight-data.mp4
 
 flight-data.mp4: $(FRAMES)
-	ffmpeg -f image2 -r 24 -i flight-data-%05d.png -c:v libx264 -preset slow $@
+	avconv -f image2 -r 24 -i flight-data-%05d.png -c:v libx264 -preset slow $@
 
 $(FRAMES): flight-data.pov flight-data.csv flight-data.py
 	FONT_PATH=$(FONT_PATH) \
