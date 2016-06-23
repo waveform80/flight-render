@@ -104,7 +104,7 @@ object {
 	translate -6*x
 }
 text {
-	ttf "Roboto-Regular.ttf" datetime(flight_timestamp, "%Y-%m-%dT%H:%M:%SZ")
+	ttf "DejaVuSans.ttf" datetime(flight_timestamp, "%Y-%m-%dT%H:%M:%SZ")
 	0.1, 0
 	pigment { White }
 	translate <-5, 6, 0>

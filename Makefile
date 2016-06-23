@@ -2,7 +2,7 @@ DATA_URL=http://raspberrypi.org/files/pycon-flight-2015-09-17.csv
 FRAME_WIDTH=1280
 FRAME_HEIGHT=720
 FRAME_COUNT=10000
-FONT_PATH=/usr/share/fonts/truetype/roboto/hinted
+FONT_PATH=/usr/share/fonts/truetype/dejavu
 
 SHELL=/bin/bash
 FRAME_NUMBERS=$(shell seq -f "%05g" 0 $$(($(FRAME_COUNT) - 1)))
@@ -13,7 +13,7 @@ all: flight-data.mp4
 clean:
 	#@rm -f flight-data.csv
 	@rm -f flight-data.inc
-	@rm -f *.png
+	@rm -f $(FRAMES)
 	@rm -f *.pov-state
 	@rm -f flight-data.mp4
 
